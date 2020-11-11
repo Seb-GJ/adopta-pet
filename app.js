@@ -39,7 +39,7 @@ if (!isProduction) {
   })
 }
 
-//mongoose.set("debug", true);
+mongoose.set("debug", true);
 
 require("./models/Usuario");
 require('./config/passport');

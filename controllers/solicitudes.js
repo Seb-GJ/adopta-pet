@@ -13,6 +13,7 @@ mongoose.set('useFindAndModify', false);
 
 function crearSolicitud(req, res, next) { // POST v1/solicitudes?mascota_id=021abo59c96b90a02344...
   // Buscamos la mascota a solicitar
+  console.log("Mascota a buscar " + req.query.mascota_id);
   Mascota.findById(req.query.mascota_id, async (err, mascota) => {
     if (!mascota || err) {
       return res.sendStatus(404)
